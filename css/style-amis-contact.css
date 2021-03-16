@@ -1,0 +1,310 @@
+/* On commence par fixer trois paramètres ajoutés de base à un sites
+sans utile dans notre cas */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #EFEADF;
+  overflow-x: hidden;
+}
+
+/* On utilise "display: flex" pour pouvoir agencer facilement les objets du site */
+.page {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+/*
+*   Les divs suivants sont communs aux différents pages du site ".changement-retour, .changement, .retour-accueil, .icon, .logo"
+*   Ils servent à disposer l'entrée, la sortie sur la page ainsi que l'animation et la position du logo
+*/
+.logo {
+  height: 140px;
+  width: 140px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.icon {
+  height: 110px;
+  width: 110px;
+  user-select: none;
+}
+
+.retour-accueil{
+  position: fixed;
+  top: 100px;  left: 20px;
+
+  color: #0e5e26;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  margin-bottom: 5%;
+  text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+  z-index: 3;
+  opacity: 0;
+}
+
+.changement {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background: #0E5E26;
+  z-index: 2;
+}
+
+.changement-retour {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  height: 100vh;
+  width: 100%;
+  background: #0E5E26;
+  z-index: 2;
+}
+
+/* On forme le titre du site avec le rectangle */
+.titre {
+  border-style: double;
+  border-width: 15px;
+  width: 55%;
+  height: 100%;
+  margin-top: 5%;
+  margin-bottom: 12%;
+  padding: 2%;
+  text-align: center;
+  align-self: center;
+  box-shadow: rgba(0, 0, 0, 0.10) 0px 0px 99px;
+}
+
+.titre>span {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 110px;
+  line-height: 100%;
+  text-shadow: rgba(0, 0, 0, 0.10) 0px 0px 99px;
+}
+
+/* Mise en forme de la barre horizontale */
+hr {
+  border: none;
+  border-top: 5px solid black;
+  color: #333;
+  overflow: visible;
+  height: 5px;
+  width: 100%;
+}
+
+.stitre-lienAmis>p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 90px;
+  line-height: 100%;
+  text-shadow: rgba(0, 0, 0, 0.10) 0px 0px 99px;
+
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+.stitre-lienAmis {
+  margin-bottom: 5%;
+}
+
+/* Les divs suivants servent à animer et positionner correctement les liens */
+.liens-amis {
+  margin-bottom: 5%;
+}
+
+.liens-amis>p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 2%;
+  text-shadow: rgba(0, 0, 0, 0.10) 0px 0px 99px;
+}
+
+.liens-amis>a {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-shadow: rgba(0, 0, 0, 0.10) 0px 0px 99px;
+  outline: none;
+  text-decoration: none;
+  padding: 2px 1px 0;
+  color: #0E5E26;
+}
+
+a{
+  display: inline-block;
+}
+
+.lien::after{
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #0E5E26;
+  transition: 0.3s;
+}
+
+.lien:hover::after{
+  width: 100%;
+}
+
+.stitre-contact>p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 90px;
+  line-height: 100%;
+  text-shadow: rgba(0, 0, 0, 0.10) 0px 0px 99px;
+
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+.stitre-contact {
+  margin-bottom: 5%;
+}
+
+.texte-contact>p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 2%;
+  text-shadow: rgba(0, 0, 0, 0.10) 0px 0px 99px;
+}
+
+.input-contact>input {
+  height: auto;
+  width: 50px;
+}
+.input-contact {
+  margin-bottom: 2%;
+}
+
+.input-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-text > input, .input-text > textarea  {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  width: 40%;
+  border: 0;
+  border-bottom: 1.5px solid black;
+  outline: 0;
+  font-size: 20px;
+  color: black;
+  padding: 7px 0;
+  background: transparent;
+  margin-bottom: 2%
+}
+
+.input-contact > select {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  width: 40%;
+  border: 1px solid black;
+  outline: 0;
+  font-size: 20px;
+  color: black;
+  padding: 7px 0;
+  background: transparent;
+  margin-bottom: 2%;
+}
+
+.input-text > input:last-child {
+  width: 60%;
+}
+/*
+.input-text > input:last-child::placeholder{
+  position: relative;
+  top: -80px; right: 0;
+}*/
+
+
+
+.texte-final > p{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 2%;
+  text-shadow: rgba(0, 0, 0, 0.10) 0px 0px 99px;
+}
+
+/* Css du footer */
+.footer {
+  height: 200px;
+  width: 100%;
+  background-color: #221914;
+  display: flex;
+  justify-content: space-around;
+}
+
+.text-gauche {
+  color: #EFEADF;
+  height: 100%;
+  width: 33.3%;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 25px;
+  padding-left: 5%;
+  padding-top: 3.5%;
+  border-right: 2px #2B2019 solid;
+  text-align: left;
+}
+
+.text-gauche>span:nth-last-child(2) {
+  color: #0E5E26;
+}
+
+.text-gauche>span:nth-last-child(1) {
+  font-weight: 300;
+  font-size: 10px;
+}
+
+.reseau-sociaux {
+  color: #EFEADF;
+  height: 100%;
+  width: 33.3%;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 3.5%;
+}
+
+.logo-reseaux {
+  width: 100%;
+}
+
+.logo-reseaux>svg {
+  fill: #0E5E26;
+}
+
+.text-droit {
+  color: #EFEADF;
+  height: 100%;
+  width: 33.3%;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  text-align: right;
+  padding-top: 5%;
+  padding-right: 5%;
+  border-left: 2px #2B2019 solid;
+}

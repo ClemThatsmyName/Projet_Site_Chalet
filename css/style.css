@@ -1,0 +1,455 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*
+    Les prochaines lignes css sont faites pour la page d'accueil
+    -accueil est la page de fond (contenant l'ensemble)
+    -logo est le logo du CV placé en haut à gauche de la page
+    -
+*/
+body {
+  background-color: #EFEADF;
+  overflow-x: hidden;
+}
+
+/*
+*   Les divs suivants sont communs aux différents pages du site ".changement-retour, .changement, .retour-accueil, .icon, .logo"
+*   Ils servent à disposer l'entrée, la sortie sur la page ainsi que l'animation et la position du logo
+*/
+.changement {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  height: 100vh;
+  width: 100%;
+  background: #0E5E26;
+  z-index: 2;
+}
+
+.changement-retour {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background: #0E5E26;
+  z-index: 2;
+}
+
+.logo-pat {
+  z-index: 3;
+  opacity: 0;
+}
+
+.logo-pat>img {
+  position: relative;
+  top: 370px;
+  left: 38%;
+}
+
+.logo-pat>p {
+  position: relative;
+  top: 220px;
+  left: 45%;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  color: white;
+  font-size: 60px;
+  text-shadow: rgba(0, 0, 0, 0.10) 0px 0px 99px;
+}
+
+/* On commence ici le css propre à cette page */
+
+.accueil {
+  height: 100vh;
+  width: 100%;
+  user-select: none;
+}
+
+.accueil-img {
+  height: 100vh;
+  width: 100%;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.26);
+}
+
+.logo {
+  height: 140px;
+  width: 140px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  height: 110px;
+  width: 110px;
+  user-select: none;
+}
+
+.explication-accueil>span {
+  position: fixed;
+  top: 45%;
+  left: 20px;
+  color: #000000;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  margin-bottom: 5%;
+  text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+  opacity: 0;
+}
+
+/*Les divs suivantes correspondent au texte superieur gauche*/
+.texttopleft {
+  position: absolute;
+  top: 5%;
+  right: 30%;
+}
+
+.aventure {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  color: #EFEADF;
+  font-size: 160px;
+  line-height: 0.8em;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.30) 0px 0px 99px;
+  transform-origin: center;
+}
+
+.txtclubvosg {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  color: #0E5E26;
+  font-size: 50px;
+  text-align: right;
+  text-shadow: rgba(0, 0, 0, 0.10) 0px 0px 99px;
+}
+
+/*
+  Ici, on travaille sur le menu accueil
+
+  A chaque image on a un travail sur img et sur le div
+  img : On commence par définir la taille et de mettre une ombre
+  div : On met sa taille à la taille de l'image et on le positionne par rapport
+  à la classe .menu-accueil
+
+*/
+/* Premiere affiche ainsi que titre de la page au dessus du quadriage de page */
+.titre-menu {
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 3px 3px 20px rgba(0, 0, 0, 0.26);
+  font-weight: 500;
+  line-height: 95%;
+  text-align: center;
+  font-size: 100px;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+/* On set le display grid du div menu-accueil (qui est le div englobant) */
+.menu-accueil {
+  display: grid;
+  grid-template-columns: [centre-gauche] 49.5% [centre-droit] 1% [fin] 49.5%;
+  grid-template-rows: [unimg] 368px 17px [deuximg] 353px 17px [troisimg] 403px 17px [quatreimg] 389px 17px [cinqimg] 369px;
+  margin-bottom: 5%;
+}
+
+/* Première image  */
+.img-histoire-chalet>img {
+  height: 735.82px;
+  width: 548.9px;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.26);
+  user-select: none;
+  z-index: 2;
+}
+
+.txtHistoireChalet {
+  position: relative;
+  bottom: 80px;
+  left: -40px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 50px;
+  color: #EFEADF;
+  text-shadow: 3px 3px 20px rgba(0, 0, 0, 0.26);
+  user-select: none;
+  display: flex;
+}
+
+.fleche-1 {
+  margin-top: 6px;
+  height: 70px;
+  width: 60px;
+  text-shadow: 3px 3px 20px rgba(0, 0, 0, 0.26);
+}
+
+.img-histoire-chalet {
+  height: 735.82px;
+  width: 548.9px;
+  grid-column-start: centre-gauche;
+  justify-self: end;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Deuxième Image */
+.img-refuge-cv>img {
+  height: 368px;
+  width: 654px;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.26);
+  user-select: none;
+}
+
+.txtRefugeCV {
+  position: relative;
+  bottom: 22%;
+  left: -40px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 50px;
+  color: #EFEADF;
+  text-shadow: 3px 3px 20px rgba(0, 0, 0, 0.26);
+  user-select: none;
+  display: flex;
+}
+
+.img-refuge-cv {
+  height: 368px;
+  width: 654px;
+  grid-column-start: fin;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.fleche-2 {
+  margin-top: 8px;
+  height: 70px;
+  width: 60px;
+  text-shadow: 3px 3px 20px rgba(0, 0, 0, 0.26);
+}
+
+/* Troisième image */
+.img-randonner-lemberg>img {
+  height: 771px;
+  width: 434px;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.26);
+  user-select: none;
+}
+
+.txtRandonnerL {
+  position: relative;
+  bottom: 15%;
+  left: -40px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 50px;
+  color: #EFEADF;
+  text-shadow: 3px 3px 20px rgba(0, 0, 0, 0.26);
+  line-height: 95%;
+  user-select: none;
+  display: flex;
+}
+
+.img-randonner-lemberg {
+  height: 771px;
+  width: 434px;
+  grid-column-start: fin;
+  grid-row-start: 3;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.fleche-3 {
+  margin-top: 22px;
+  height: 70px;
+  width: 60px;
+  text-shadow: 3px 3px 20px rgba(0, 0, 0, 0.26);
+}
+
+/* Quatrième Image */
+.img-decouvrir-lemberg>img {
+  height: 403px;
+  width: 716px;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.26);
+  user-select: none;
+}
+
+.txtDecouvrirL {
+  position: relative;
+  bottom: 22%;
+  left: -40px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 50px;
+  color: #EFEADF;
+  text-shadow: 3px 3px 20px rgba(0, 0, 0, 0.26);
+  user-select: none;
+  display: flex;
+}
+
+.img-decouvrir-lemberg {
+  height: 403px;
+  width: 716px;
+  grid-column-start: centre-gauche;
+  justify-self: end;
+  grid-row-start: 5;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.fleche-4 {
+  margin-top: 8px;
+  height: 70px;
+  width: 60px;
+  text-shadow: 3px 3px 20px rgba(0, 0, 0, 0.26);
+}
+
+/* Cinquième Image */
+.img-sortie-CV>img {
+  height: 777px;
+  width: 518px;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.26);
+  user-select: none;
+}
+
+.txtSortieCV {
+  position: relative;
+  bottom: 99%;
+  left: -40px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 50px;
+  color: #EFEADF;
+  text-shadow: 3px 3px 20px rgba(0, 0, 0, 0.26);
+  line-height: 95%;
+  user-select: none;
+  display: flex;
+}
+
+.img-sortie-CV {
+  height: 777px;
+  width: 518px;
+  grid-column-start: centre-gauche;
+  justify-self: end;
+  grid-row-start: 7;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.fleche-5 {
+  margin-top: 20px;
+  height: 70px;
+  width: 60px;
+  text-shadow: 3px 3px 20px rgba(0, 0, 0, 0.26);
+}
+
+/* Sixième Image */
+.img-lien-amis>img {
+  height: 386px;
+  width: 687px;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.26);
+  user-select: none;
+}
+
+.txtLienAmis {
+  position: relative;
+  bottom: 100%;
+  left: -40px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 50px;
+  color: #EFEADF;
+  text-shadow: 3px 3px 20px rgba(0, 0, 0, 0.26);
+  user-select: none;
+  display: flex;
+}
+
+.img-lien-amis {
+  height: 386px;
+  width: 687px;
+  grid-column-start: fin;
+  grid-row-start: 7;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.fleche-6 {
+  margin-top: 10px;
+  height: 70px;
+  width: 60px;
+  text-shadow: 3px 3px 20px rgba(0, 0, 0, 0.26);
+}
+
+/* Css du footer | div parent*/
+.footer {
+  height: 200px;
+  width: 100%;
+  background-color: #221914;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Div enfant, celle placée à gauche */
+.text-gauche {
+  color: #EFEADF;
+  height: 100%;
+  width: 33.3%;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 25px;
+  padding-left: 5%;
+  padding-top: 3.5%;
+  border-right: 2px #2B2019 solid;
+}
+
+/* Couleur de certain mot */
+.text-gauche>span:nth-last-child(2) {
+  color: #0E5E26;
+}
+
+.text-gauche>span:nth-last-child(1) {
+  font-weight: 300;
+  font-size: 10px;
+}
+
+.reseau-sociaux {
+  color: #EFEADF;
+  height: 100%;
+  width: 33.3%;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 3.5%;
+}
+
+.logo-reseaux {
+  width: 100%;
+}
+
+.logo-reseaux>svg {
+  fill: #0E5E26;
+}
+
+/* Div enfant, celle placée à droite */
+.text-droit {
+  color: #EFEADF;
+  height: 100%;
+  width: 33.3%;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  text-align: right;
+  padding-top: 5%;
+  padding-right: 5%;
+  border-left: 2px #2B2019 solid;
+}

@@ -1,0 +1,810 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #EFEADF;
+  overflow-x: hidden;
+}
+
+/*
+*   Les divs suivants sont communs aux différents pages du site ".changement-retour, .changement, .retour-accueil, .icon, .logo"
+*   Ils servent à disposer l'entrée, la sortie sur la page ainsi que l'animation et la position du logo
+*/
+.changement {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background: #0E5E26;
+  z-index: 2;
+}
+
+.changement-retour {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  height: 100vh;
+  width: 100%;
+  background: #0E5E26;
+  z-index: 2;
+}
+
+.logo {
+  height: 140px;
+  width: 140px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.icon {
+  height: 110px;
+  width: 110px;
+  user-select: none;
+}
+
+.retour-accueil{
+  position: fixed;
+  top: 100px;  left: 20px;
+
+  color: #0e5e26;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  margin-bottom: 5%;
+  text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+  z-index: -1;
+  opacity: 0;
+}
+
+/* On commence ici le css propre à la page */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.titre {
+  border-style: double;
+  border-width: 15px;
+  width: 60%;
+  height: 100%;
+  margin-top: 5%;
+  margin-bottom: 12%;
+  padding: 2%;
+  text-align: center;
+  align-self: center;
+  box-shadow: rgba(0, 0, 0, 0.10) 0px 0px 99px;
+}
+
+.titre>span {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 90px;
+  line-height: 100%;
+  text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+}
+
+.premier-texte {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 2%;
+  text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+}
+
+.deuxieme-texte {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 5%;
+  text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+}
+
+#MapsOpen {
+  height: 500px;
+  width: 70%;
+  box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+  border: 1px ridge rgba(4, 52, 45, 1);
+  margin-bottom: 5%;
+  cursor: url(https://maps.gstatic.com/mapfiles/openhand_8_8.cur);
+  opacity: 0;
+}
+
+/* Div contenant tout le texte */
+
+.text {
+  height: auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 10% 40% 40% 10%;
+}
+
+/* Les différents "Articles" numérotés de 1 à 11 */
+/* 01 | Source Saint Hubert */
+
+.source-SH {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  height: auto;
+  width: auto;
+}
+
+.titre-SH {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 55px;
+  text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+  text-align: left;
+  margin-bottom: 2%;
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+.source-SH>p:nth-of-type(0n + 1),
+.source-SH>p:nth-of-type(0n + 3) {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 3%;
+  text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+  text-align: left;
+}
+
+.source-SH>p:nth-of-type(0n + 2),
+.source-SH>p:nth-of-type(0n + 4){
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 3%;
+  text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+  text-align: right;
+}
+
+.img-SH > img {
+  height: 300px;
+  width: auto;
+  box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+}
+
+.img-SH{
+  display: flex;
+  margin-left: 2%;
+  margin-bottom: 3%;
+}
+
+/* 02 | Croix Saint Hubert */
+
+.croix-SH {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  height: auto;
+  width: auto;
+}
+
+.titre-CSH {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 55px;
+  text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+  text-align: left;
+  margin-bottom: 3%;
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+.croix-SH>p:nth-of-type(0n + 1),
+.croix-SH>p:nth-of-type(0n + 3) {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 3%;
+  text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+  text-align: left;
+}
+
+.croix-SH>p:nth-of-type(0n + 2),
+.croix-SH>p:nth-of-type(0n + 4){
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 3%;
+  text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+  text-align: right;
+}
+
+.img-croix-SH > img {
+  height: 400px;
+  width: auto;
+  box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+}
+
+.img-croix-SH{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 2%;
+  margin-bottom: 3%;
+}
+
+/* 03 | La cascade des Ondines */
+
+.cascade-O {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  height: auto;
+  width: auto;
+}
+
+.titre-On {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 55px;
+  text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+  text-align: left;
+  margin-bottom: 3%;
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+.cascade-O>p:nth-of-type(0n + 1),
+.cascade-O>p:nth-of-type(0n + 3) {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 3%;
+  text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+  text-align: left;
+}
+
+.cascade-O>p:nth-of-type(0n + 2),
+.cascade-O>p:nth-of-type(0n + 4){
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 3%;
+  text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+  text-align: right;
+}
+
+.img-cascade-O > img {
+  height: 500px;
+  width: auto;
+  box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+}
+
+.img-cascade-O{
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 2%;
+  margin-bottom: 3%;
+}
+
+/* 04 | Rocher des Trois Figures */
+
+.rocher-3F {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  height: auto;
+  width: auto;
+}
+
+.titre-R3F {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 55px;
+  text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+  text-align: left;
+  margin-bottom: 3%;
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+.rocher-3F>p:nth-of-type(0n + 1),
+.rocher-3F>p:nth-of-type(0n + 3) {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 3%;
+  text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+  text-align: left;
+}
+
+.rocher-3F>p:nth-of-type(0n + 2),
+.rocher-3F>p:nth-of-type(0n + 4){
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 3%;
+  text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+  text-align: right;
+}
+
+.img-rocher-3F > img {
+  height: 500px;
+  width: auto;
+  box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+}
+
+.img-rocher-3F{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 5%;
+  margin-bottom: 3%;
+}
+
+/* 05 |  La stèle Américaine */
+
+.stele-A {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  height: auto;
+  width: auto;
+}
+
+.titre-SA {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 55px;
+  text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+  text-align: left;
+  margin-bottom: 3%;
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+.stele-A>p:nth-of-type(0n + 1),
+.stele-A>p:nth-of-type(0n + 3),
+.stele-A>p:nth-of-type(0n + 5),
+.stele-A>p:nth-of-type(0n + 7){
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 3%;
+  text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+  text-align: left;
+}
+
+.stele-A>p:nth-of-type(0n + 2),
+.stele-A>p:nth-of-type(0n + 4),
+.stele-A>p:nth-of-type(0n + 6){
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 3%;
+  text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+  text-align: right;
+}
+
+.img-stele-A > img {
+  height: 400px;
+  width: auto;
+  box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+
+}
+
+.img-stele-Abis > img {
+  height: 500px;
+  width: auto;
+  box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+  margin-bottom: 3%;
+}
+
+.img-stele-A{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-right: 5%;
+  margin-bottom: 3%;
+}
+
+/* 06 | la Croix du Mailfelsen */
+
+.mailfelsen {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  height: auto;
+  width: auto;
+}
+
+.titre-mailfelsen {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 55px;
+  text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+  text-align: left;
+  margin-bottom: 3%;
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+.img-mailfelsen {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.img-mailfelsen > img {
+  height: 200px;
+  width: auto;
+  margin-right: 15%;
+  box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+}
+
+.mailfelsen>p:nth-of-type(0n + 1),
+.mailfelsen>p:nth-of-type(0n + 3) {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 3%;
+  text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+  text-align: left;
+}
+
+.mailfelsen>p:nth-of-type(0n + 2),
+.mailfelsen>p:nth-of-type(0n + 4){
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 3%;
+  text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+  text-align: right;
+}
+
+.img-mailfelsen > img {
+  height: 200px;
+  width: auto;
+  box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+}
+
+.img-mailfelsen{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 5%;
+  margin-bottom: 3%;
+
+}
+
+/* 07 | le lavoir du Helloch */
+
+.lavoir-H {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  height: auto;
+  width: auto;
+}
+
+.titre-LH {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 55px;
+  text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+  text-align: left;
+  margin-bottom: 3%;
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+.lavoir-H>p:nth-of-type(0n + 1),
+.lavoir-H>p:nth-of-type(0n + 3) {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 3%;
+  text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+  text-align: left;
+}
+
+.lavoir-H>p:nth-of-type(0n + 2),
+.lavoir-H>p:nth-of-type(0n + 4){
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 3%;
+  text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+  text-align: right;
+}
+
+.img-lavoir-H > img {
+  height: 400px;
+  width: auto;
+  box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+}
+
+.img-lavoir-H{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 5%;
+  margin-bottom: 3%;
+}
+
+/* 08 | La Tombe Russe */
+
+.tombe-R {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  height: auto;
+  width: auto;
+}
+
+.titre-TR {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 55px;
+  text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+  text-align: left;
+  margin-bottom: 3%;
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+.tombe-R>p:nth-of-type(0n + 1),
+.tombe-R>p:nth-of-type(0n + 3) {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 3%;
+  text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+  text-align: left;
+}
+
+.tombe-R>p:nth-of-type(0n + 2),
+.tombe-R>p:nth-of-type(0n + 4){
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 3%;
+  text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+  text-align: right;
+}
+
+.img-tombe-russe > img {
+  height: 500px;
+  width: auto;
+  box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+}
+
+.img-tombe-russe{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-left: 5%;
+  margin-bottom: 3%;
+
+}
+
+/* 09 | Le lavoir Grébil */
+
+.lavoir-G {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  height: auto;
+  width: auto;
+}
+
+.titre-LG {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 55px;
+  text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+  text-align: left;
+  margin-bottom: 3%;
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+.lavoir-G>p:nth-of-type(0n + 1),
+.lavoir-G>p:nth-of-type(0n + 3) {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 3%;
+  text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+  text-align: left;
+}
+
+.lavoir-G>p:nth-of-type(0n + 2),
+.lavoir-G>p:nth-of-type(0n + 4){
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 3%;
+  text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+  text-align: right;
+}
+
+.img-lavoir-G > img {
+  height: 500px;
+  width: auto;
+  margin-right: 5%;
+  box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+}
+
+.img-lavoir-G{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 3%;
+}
+
+/* 10 | la Matrone de la Bildmuhl */
+
+.matrone-B {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  height: auto;
+  width: auto;
+}
+
+.titre-MB {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 55px;
+  text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+  text-align: left;
+  margin-bottom: 3%;
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+.matrone-B>p:nth-of-type(0n + 1),
+.matrone-B>p:nth-of-type(0n + 3) {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 3%;
+  text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+  text-align: left;
+}
+
+.matrone-B>p:nth-of-type(0n + 2),
+.matrone-B>p:nth-of-type(0n + 4){
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 3%;
+  text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+  text-align: right;
+}
+
+.img-matrone-B > img {
+  height: 200px;
+  width: auto;
+  margin-right: 5%;
+  box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+}
+
+.img-matrone-B{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 3%;
+}
+
+/* 11 | la stèle "WURTZ" */
+
+.stele-W {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  height: auto;
+  width: auto;
+}
+
+.titre-W {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 55px;
+  text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+  text-align: left;
+  margin-bottom: 3%;
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+.stele-W>p:nth-of-type(0n + 1),
+.stele-W>p:nth-of-type(0n + 3) {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 3%;
+  text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+  text-align: left;
+}
+
+.stele-W>p:nth-of-type(0n + 2),
+.stele-W>p:nth-of-type(0n + 4){
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 3%;
+  text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+  text-align: right;
+}
+
+.img-stele-W > img {
+  height: 400px;
+  width: auto;
+  margin-right: 5%;
+  box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+}
+
+.img-stele-W{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3%;
+}
+
+/* Css du footer */
+.footer {
+  height: 200px;
+  width: 100%;
+  background-color: #221914;
+  display: flex;
+  justify-content: space-around;
+}
+
+.text-gauche {
+  color: #EFEADF;
+  height: 100%;
+  width: 33.3%;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 25px;
+  padding-left: 5%;
+  padding-top: 3.5%;
+  border-right: 2px #2B2019 solid;
+  text-align: left;
+}
+
+.text-gauche>span:nth-last-child(2) {
+  color: #0E5E26;
+}
+
+.text-gauche>span:nth-last-child(1) {
+  font-weight: 300;
+  font-size: 10px;
+}
+
+.reseau-sociaux {
+  color: #EFEADF;
+  height: 100%;
+  width: 33.3%;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 3.5%;
+}
+
+.logo-reseaux {
+  width: 100%;
+}
+
+.logo-reseaux>svg {
+  fill: #0E5E26;
+}
+
+.text-droit {
+  color: #EFEADF;
+  height: 100%;
+  width: 33.3%;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  text-align: right;
+  padding-top: 5%;
+  padding-right: 5%;
+  border-left: 2px #2B2019 solid;
+}

@@ -1,0 +1,261 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #EFEADF;
+  overflow-x: hidden;
+}
+
+
+/*
+*   Les divs suivants sont communs aux différents pages du site ".changement-retour, .changement, .retour-accueil, .icon, .logo"
+*   Ils servent à disposer l'entrée, la sortie sur la page ainsi que l'animation et la position du logo
+*/
+.logo {
+  height: 140px;
+  width: 140px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.icon {
+  height: 110px;
+  width: 110px;
+  user-select: none;
+}
+
+.retour-accueil{
+  position: fixed;
+  top: 100px;  left: 20px;
+
+  color: #0e5e26;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  margin-bottom: 5%;
+  text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+  z-index: 3;
+  opacity: 0;
+}
+
+.changement {
+  position: fixed;
+  top: 0; right: 0;
+  height: 100vh;
+  width: 100%;
+  background: #0E5E26;
+  z-index: 2;
+}
+
+.changement-retour {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  height: 100vh;
+  width: 100%;
+  background: #0E5E26;
+  z-index: 2;
+}
+
+/* Début du css propre à cette page */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.titre {
+  border-style: double;
+  border-width: 15px;
+  width: 55%;
+  height: 100%;
+  margin-top: 5%;
+  margin-bottom: 12%;
+  padding: 2%;
+  text-align: center;
+  align-self: center;
+  box-shadow: rgba(0, 0, 0, 0.10) 0px 0px 99px;
+}
+
+.titre>span {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 110px;
+  line-height: 100%;
+  text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+}
+
+.premier-texte {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 2%;
+  text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+}
+
+.img-signe-cv {
+  margin-bottom: 2%;
+}
+
+.deuxieme-texte {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 2%;
+  text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+}
+
+.img-club-icon>img {
+  height: 300px;
+  width: auto;
+}
+
+.troisieme-texte {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 2%;
+  text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+}
+
+.img-guide-balades {
+  margin-bottom: 2%;
+}
+
+.quatrieme-texte {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 2%;
+  text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+}
+
+.img-guide-bleu {
+  margin-bottom: 2%;
+}
+
+.cinquieme-texte {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 2%;
+  text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+}
+
+.img-carte-ign {
+  margin-bottom: 2%;
+}
+
+.sixieme-texte {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 2%;
+  text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+}
+
+.img-carte-vosges {
+  margin-bottom: 2%;
+}
+
+.septieme-texte {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 2%;
+  text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+}
+
+.img-guide-a-pied{
+  margin-bottom: 2%;
+}
+
+.huitieme-texte {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 2%;
+  text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+}
+
+.real {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  color: #B4B4B4;
+  font-size: 10px;
+  margin-bottom: 2%;
+  margin-left: 5%;
+  text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.20);
+}
+
+/* Css du footer */
+.footer {
+  height: 200px;
+  width: 100%;
+  background-color: #221914;
+  display: flex;
+  justify-content: space-around;
+}
+
+.text-gauche {
+  color: #EFEADF;
+  height: 100%;
+  width: 33.3%;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 25px;
+  padding-left: 5%;
+  padding-top: 3.5%;
+  border-right: 2px #2B2019 solid;
+  text-align: left;
+}
+
+.text-gauche>span:nth-last-child(2) {
+  color: #0E5E26;
+}
+
+.text-gauche>span:nth-last-child(1) {
+  font-weight: 300;
+  font-size: 10px;
+}
+
+.reseau-sociaux {
+  color: #EFEADF;
+  height: 100%;
+  width: 33.3%;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 3.5%;
+}
+
+.logo-reseaux {
+  width: 100%;
+}
+
+.logo-reseaux>svg {
+  fill: #0E5E26;
+}
+
+.text-droit {
+  color: #EFEADF;
+  height: 100%;
+  width: 33.3%;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  text-align: right;
+  padding-top: 5%;
+  padding-right: 5%;
+  border-left: 2px #2B2019 solid;
+}

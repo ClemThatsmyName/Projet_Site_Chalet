@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" type="image/png" href="img/icon.png">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="" />
+
+  <link rel="stylesheet" href="css/decouvrir-lemberg.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <title>Découvrir Lemberg</title>
+</head>
+
+<body>
+  <div class="page">
+
+    <!-- Div permettant la transition entre les pages -->
+    <div class="changement">
+
+    </div>
+
+    <div class="changement-retour">
+
+    </div>
+
+    <div class="logo">
+      <img src="img/icon.png" alt="icon" class="icon">
+    </div>
+
+    <div class="retour-accueil">
+      <p>Accueil</p>
+    </div>
+
+    <!-- Début des balises html propres à cette page -->
+    <div class="titre">
+      <span>Découvrir Lemberg</span>
+    </div>
+    <div class="premier-texte">
+      <span>Découvrez différents points remarquables des forêts de Lemberg.</span>
+    </div>
+
+    <div class="deuxieme-texte">
+      <span>Tous les points sont indiqués sur la carte suivante :</span>
+    </div>
+
+    <div id="MapsOpen">
+    </div>
+
+    <div class="text">
+
+      <!-- 01 | Source Saint Hubert -->
+
+      <div class="source-SH">
+        <div class="titre-SH">
+          <p id="source-lien">01
+            <svg xmlns="http://www.w3.org/2000/svg" width="5.52" height="47.82" viewBox="0 0 5.52 47.82">
+              <rect id="Rectangle_23" data-name="Rectangle 23" width="47.82" height="5.52" transform="translate(5.52) rotate(90)" />
+            </svg>
+            La source Saint Hubert
+          </p>
+        </div>
+        <p>Accès : Depuis le chalet du Club Vosgien. Descendre les escaliers et suivre le chevalet jaune.<br>
+          Traverser la route de Bitche et continuer sur le large chemin.<br>
+          Suivez le chevalet jaune jusqu’à la source Saint Hubert. Revenez sur vos pas pour le retour..<br>
+          Compter une bonne heure pour l’aller retour.. </p>
+
+        <p>Descriptif: Le rocher sculpté date de l’époque gallo-romaine.<br>
+          Les historien s’accordent à dire qu’il remonterait au IIIème siècle de notre ère.<br>
+          Initialement appelé « Bomphosen Brunnen », soit « Fontaine aux culottes bouffantes » <br>
+          le nom a été francisé que tardivement. Saint Hubert, patron des chasseur, <br>
+          a donné son nom à tord à cette sculpture en l’interprétant comme une scène de chasse.</p>
+
+        <p>On y identifie malheureusement plus que la partie basse de deux divinités romaine :<br>
+          Sylvain, dieux de la forêt avec un bâton et Diane, déesse de la chasse, avec son arc. <br>
+          On y identifie également assez facilement un combat de cerfs, <br>
+          des sangliers ou un auroch, bœuf sauvage disparut au moyen âge.</p>
+
+        <p>A quelques mètres,<br>
+          un lavoir récemment restauré servait aux villageoises pour laver leur linge.<br>
+          Un personnage se baignant les pieds sur la sculpture pourrait attribuer <br>
+          des vertus curatives à cette source.</p>
+
+        <div class="img-SH">
+          <img src="img/maxresdefault.jpg" alt="Source Saint Hubert">
+        </div>
+      </div>
+
+      <!-- 02 | Croix Saint Hubert -->
+
+      <div class="croix-SH">
+        <div class="titre-CSH">
+          <p id="croix-SH-lien">02
+            <svg xmlns="http://www.w3.org/2000/svg" width="5.52" height="47.82" viewBox="0 0 5.52 47.82">
+              <rect id="Rectangle_23" data-name="Rectangle 23" width="47.82" height="5.52" transform="translate(5.52) rotate(90)" />
+            </svg>
+            La Croix Saint Hubert
+          </p>
+        </div>
+        <p>Accès : Depuis le chalet du Club Vosgien,<br>
+          suivre le rectangle « jaune-blanc-jaune » en direction de Bitche.<br>
+          Longez la piste cyclable jusqu’au carrefour du pont-neuf.<br>
+          Le chemin remonte vers le sommet du Kreutzberg et vous mène à la croix Saint Hubert.</p>
+
+        <p>Descriptif: Ce calvaire semble perdu au milieu de nul part.<br>
+          Pourtant, jusqu’au début du XXème siècle,<br>
+          un chemin d’accès de Lemberg à Bitche passait à quelques mètres de cette croix...</p>
+
+        <p>On identifie sur le bas du fût un personnage à genoux devant un cerf :<br>
+          Il s’agit d’une représentation de Saint Hubert.<br>
+          Le cerf porte entre ses bois un crucifix et Saint Hubert tiens dans son dos<br>
+          un cor de chasse appelé « clef de Saint Hubert ».</p>
+
+        <p>Plus haut, on distingue deux autres personnages :<br>
+          Saint Benoit et probablement la Vierge Marie.<br>
+          Bien souvent, on représentait les saints patrons des donateurs qui ont érigé le calvaire.<br>
+          <br>
+          La croix est couverte de multiples graffitis, sans rapport avec le monument original.<br>
+          La date de 1778 semble toutefois être d’époque.<br>
+          <br>
+          De multiples rénovations ont permis de conserver jusqu’à nos jours cette belle croix.
+        </p>
+
+        <div class="img-croix-SH">
+          <img src="img/unnamed1.jpg" alt="Croix Saint Hubert">
+        </div>
+      </div>
+
+      <!-- 03 | La cascade des Ondines -->
+
+      <div class="cascade-O">
+        <div class="titre-On">
+          <p id="cascade-lien">03
+            <svg xmlns="http://www.w3.org/2000/svg" width="5.52" height="47.82" viewBox="0 0 5.52 47.82">
+              <rect id="Rectangle_23" data-name="Rectangle 23" width="47.82" height="5.52" transform="translate(5.52) rotate(90)" />
+            </svg>
+            La cascade des Ondines
+          </p>
+        </div>
+        <p>Accès : Depuis le chalet du Club Vosgien, descendre les escaliers puis suivre l’anneau jaune.<br>
+          Traversez la piste cyclable puis suivre le sentier qui s’enfonce à droite.<br>
+          Après quelques minutes, passez sous la voie de chemin de fer, puis accédez au lavoir du Wasserfelsen.<br>
+          Suivre le sentier, qui revient en dessous de la cascade.<br>
+          Pour le retour, suivre le triangle bleu jusque dans le village.</p>
+
+        <p>Descriptif : La cascade des ondines, initialement appelée « Wasserfelsen »,<br>
+          est un espace naturel qui mérite d’être connu.<br>
+          A son sommet on peut découvrir un ancien lavoir. Le large mur de soutènement<br>
+          a été construit vers 1860<br>
+          lors de la construction de la ligne de chemin de fer Lemberg-Bitche.<br>
+          <br>
+          De là, le ruisseau s’écoule sur d’imposantes plaques de grès<br>
+          pour former de belles cascades, particulièrement impressionnantes en hiver.<br>
+          Le mince filet d’eau forme à ce niveau les tout premiers prémices de la Zinzel du Nord.
+        </p>
+
+        <div class="img-cascade-O">
+          <img src="img/bild4.jpg" alt="Cascade des Ondines">
+        </div>
+
+      </div>
+
+      <!-- 04 | Rocher des Trois Figures -->
+
+      <div class="rocher-3F">
+        <div class="titre-R3F">
+          <p id="rocherF-lien">04
+            <svg xmlns="http://www.w3.org/2000/svg" width="5.52" height="47.82" viewBox="0 0 5.52 47.82">
+              <rect id="Rectangle_23" data-name="Rectangle 23" width="47.82" height="5.52" transform="translate(5.52) rotate(90)" />
+            </svg>
+            Le Rocher des Trois Figures
+          </p>
+        </div>
+        <p>Accès : Depuis le chalet, suivre le balisage « triangle rouge ».<br>
+          Passez devant le stade et traversez la route. Avant le parking, le chemin prend à droite.<br>
+          Suivez toujours le triangle rouge durant une bonne heure.<br>
+          Pour le retour, revenez sur vos pas <br>
+          ou terminez la randonnée , toujours avec le triangle rouge, jusqu’à la poste.<br>
+          Comptez dans les deux cas deux heures de marche.</p>
+
+        <p>Descriptif : Tout comme la source Saint Hubert,<br>
+          nous sommes là en présence d’une sculpture très ancienne.<br>
+          Alors que certains la prétendent d’origine celtiques,<br>
+          d’autres l’attribuent à la période gallo-romaine.<br>
+          A première vue, on distingue deux personnages en tunique, mais non identifiables.<br>
+          Pourtant, sur la droite, l’ébauche d’un troisième personnage semble avoir été sculpté.</p>
+
+        <p>On devine également sur les personnages différentes<br>
+          croix profondément gravées dans le rocher.<br>
+          Elles pourraient remonter à la première vague de christianisation du Pays de Bitche.</p>
+
+        <p>Initialement le rocher s’appelait « Drei Bilder Felsen ».<br>
+          Là aussi, le nom a été francisé et traduit par « rocher des trois figures ».<br>
+          La vallée en contrebas s’appelle alors tout naturellement « Dreibilderthal ».</p>
+
+        <div class="img-rocher-3F">
+          <img src="img/A05---rocher-3-figures--1024x768-.jpg" alt="Cascade des Ondines">
+        </div>
+      </div>
+
+      <!-- 05 |  La stèle Américaine -->
+
+      <div class="stele-A">
+        <div class="titre-SA">
+          <p id="steleA-lien">05
+            <svg xmlns="http://www.w3.org/2000/svg" width="5.52" height="47.82" viewBox="0 0 5.52 47.82">
+              <rect id="Rectangle_23" data-name="Rectangle 23" width="47.82" height="5.52" transform="translate(5.52) rotate(90)" />
+            </svg>
+            La Stèle Américaine
+          </p>
+        </div>
+        <p>Accès : Depuis le chalet du Club Vosgien, descendre les escaliers puis suivre le rectangle <br>
+          « jaune-blanc-jaune » et rester sur la piste cyclable jusqu’au carrefour du Pont Neuf.<br>
+          Puis prendre à droite le losange jaune sur quelques centaines de mètres.<br>
+          Comptez environ 30 bonnes minutes de marche pour l’aller.</p>
+
+        <p>Descriptif: C’est en 1976 qu’à cet endroit, ont été découvert les restes du corps d’un soldat américain<br>
+          tué sur le champ d’honneur.<br>
+          Maurice E. Lloyd fut exhumé et identifié grâce à son matricule,<br>
+          il s’est avéré que ce soldat faisait partie de la « Century division »<br>
+          qui comptait environ 14.000 hommes et en perdit 750 lors des combats de libération du village.</p>
+
+        <p>Vers la fin décembre 1944, l’armée américaine était parvenue jusqu’aux portes de Bitche.<br>
+          Le 31 décembre s’annonçait plutôt calme et les « Century Men » se préparaient à passer le Nouvel An.<br>
+          Néanmoins, le 1er janvier, à 0h15, débuta une opération militaire allemande,<br>
+          baptisée « opération Nordwind »<br>
+          qui faillit porter un coup décisif à l’avancée américaine.<br>
+          Hitler avait en effet, préparé une vaste opération<br>
+          de contre-offensive sur tout le front de la 7ème armée US et il s’en fallut de peu<br>
+          pour qu’elle aboutisse à une victoire du camp allemand.</p>
+
+        <p>En pleine nuit et sous une couche de soixante centimètres de neige, les GI’s<br>
+          furent surpris par les cris et tirs des Allemands.<br>
+          Probablement sous l’emprise de l’alcool, ces derniers se jetèrent à corps perdu dans la bataille.<br>
+          Pris de panique, les soldats américains se replièrent.<br>
+          Le choc fut si violent qu’une section américaine, basée près de l’étang de Hasselfurt,<br>
+          battit en retraite en courant jusqu’à la Hohfurst, abandonnant au passage armes et munitions.<br>
+          Les différents assauts nazis furent toutefois freinés durant les premières journées du mois de janvier. </p>
+
+        <p>Lloyd fut retrouvé avec son uniforme, son fusil ainsi qu’une médaille<br>
+          que sa fiancée lui avait offerte comprenant les inscriptions :<br>
+          « Avec amour pour Mo de la part de Billye ».</p>
+
+        <p>En 1995, un membre du Club Vosgien de Lemberg a façonné de main de maître<br>
+          cette stèle qui a été inaugurée en septembre de la même année en présence<br>
+          des principales personnalités civiles, militaires et religieuses de la région ainsi que d’un<br>
+          lieutenant colonel américain venu de très loin pour cette circonstance.</p>
+
+        <p>Désormais justice a été rendue à ce vaillant soldat américain qui repose en paix<br>
+          au cimetière américain des Ardennes Belges.<br>
+          Il a sans doute beaucoup souffert pour défendre la paix loin de sa patrie.</p>
+
+        <div class="img-stele-A">
+          <img src="img/P9030360.jpg" alt="Stèle Américaine">
+          <img src="img/title-1481474456.jpg" alt="Soldats commémoration">
+        </div>
+
+        <div class="img-stele-Abis">
+          <img src="img/petite-concertation-avant-de-cheminer-en-formation-en-foret-avec-la-prudence-qui-s-impose-photo-rl-1481474456.jpg" alt="Stèle Américaine">
+        </div>
+      </div>
+
+      <!-- 06 | la Croix du Mailfelsen -->
+
+      <div class="mailfelsen">
+        <div class="titre-mailfelsen">
+          <span id="mailfelsen-lien">06
+            <svg xmlns="http://www.w3.org/2000/svg" width="5.52" height="47.82" viewBox="0 0 5.52 47.82">
+              <rect id="Rectangle_23" data-name="Rectangle 23" width="47.82" height="5.52" transform="translate(5.52) rotate(90)" />
+            </svg>
+            La croix du Mailfelsen
+          </span>
+        </div>
+        <div class="img-mailfelsen">
+          <img src="img/reduite1.jpg" alt="Mailfelsen">
+        </div>
+        <p>Accès : Depuis le chalet, suivre le balisage « triangle rouge ».<br>
+          Passez devant le stade et traversez la route. Avant le parking, le chemin prend à droite.<br>
+          Suivez toujours le triangle rouge durant une bonne heure.<br>
+          Pour le retour, revenez sur vos pas<br>
+          ou terminez la randonnée , toujours avec le triangle rouge, jusqu’à la poste.<br>
+          Comptez dans les deux cas deux heures de marche.</p>
+
+        <p>Descriptif : Tout comme la source Saint Hubert,<br>
+          nous sommes là en présence d’une sculpture très ancienne.<br>
+          Alors que certains la prétendent d’origine celtiques,<br>
+          d’autres l’attribuent à la période gallo-romaine.<br>
+          A première vue, on distingue deux personnages en tunique, mais non identifiables.<br>
+          Pourtant, sur la droite, l’ébauche d’un troisième personnage semble avoir été sculpté.</p>
+
+        <p>On devine également sur les personnages différentes<br>
+          croix profondément gravées dans le rocher.<br>
+          Elles pourraient remonter à la première vague de christianisation du Pays de Bitche.</p>
+
+        <p>Initialement le rocher s’appelait « Drei Bilder Felsen ».<br>
+          Là aussi, le nom a été francisé et traduit par « rocher des trois figures ».<br>
+          La vallée en contrebas s’appelle alors tout naturellement « Dreibilderthal ».</p>
+      </div>
+
+      <!-- 07 | le lavoir du Helloch -->
+
+      <div class="lavoir-H">
+        <div class="titre-LH">
+          <p id="lavoirH-lien">07
+            <svg xmlns="http://www.w3.org/2000/svg" width="5.52" height="47.82" viewBox="0 0 5.52 47.82">
+              <rect id="Rectangle_23" data-name="Rectangle 23" width="47.82" height="5.52" transform="translate(5.52) rotate(90)" />
+            </svg>
+            Le lavoir du Helloch
+          </p>
+        </div>
+        <p>Accès : Depuis le Chalet du Club Vosgien, descendre les escaliers et suivre le triangle bleu.<br>
+          Après un passage devant la cascade des ondines vous arrivez au lavoir du Helloch.<br>
+          Retour au village en suivant toujours le triangle bleu.<br>
+          Depuis la poste, suivre le triangle bleu.<br>
+          Comptez 30 minutes de marche dans les deux cas.</p>
+
+        <p>Descriptif : Le lavoir du Helloch est un des nombreux lavoir du village.<br>
+          Il était en service jusqu’au début du XXème siècle.<br>
+          Depuis le village, l’accès se fait par un petit sentier escarpé<br>
+          qu’utilisait les femmes pour amener leur linge au lavoir.<br>
+          Autrefois, alors que<br>
+          les machines à laver n’existaient bien évidement pas et l’eau courante non plus,<br>
+          le linge était lavé à la maison durant les « grandes lessives ».<br>
+          Il était coutumier de ne laver le linge que quelques fois par année.<br>
+          Le linge sale était stocké et lavé durant ces grandes occasions.</p>
+
+        <p>Ainsi, les familles les plus riches et qui possédaient le plus de linge,<br>
+          ne lavaient leur textiles que deux à trois fois par an !<br>
+          Les plus modestes devaient laver plus souvent ! Après cuisson avec du savon ou des cendres,<br>
+          le linge était transporté jusqu’au lavoir. Trois bac servaient au au rinçage.<br>
+          Les plus en aval servaient pour un essorage grossier et le bac en amont servait à la finition.<br>
+          Le lavoir, en grande partie détruit suite aux intempéries,<br>
+          a été rénové en 2010 par le Club Vosgien de Lemberg.</p>
+
+        <div class="img-lavoir-H">
+          <img src="img/ob_91215e_dsc-0974-fileminimizer.jpg" alt="Lavoir du Helloch">
+        </div>
+
+      </div>
+
+      <!-- 08 | La Tombe Russe -->
+
+      <div class="tombe-R">
+        <div class="titre-TR">
+          <p id="tombeR-lien">08
+            <svg xmlns="http://www.w3.org/2000/svg" width="5.52" height="47.82" viewBox="0 0 5.52 47.82">
+              <rect id="Rectangle_23" data-name="Rectangle 23" width="47.82" height="5.52" transform="translate(5.52) rotate(90)" />
+            </svg>
+            La Tombe Russe
+          </p>
+        </div>
+        <p>Accès : au départ du chalet, suivre <br>
+          le losange jaune-blanc-jaune et compter 40 minutes de marche. <br>
+          Plus facile et rapide : depuis la piste cyclable, au carrefour du Pont Neuf, <br>
+          suivre le losange jaune. En vélo, compter 10 minutes depuis le carrefour.</p>
+
+        <p>Cette tombe a, au fil des années, connu de multiples légendes et interprétations.<br>
+          Sa dénomination de « tombe russe » met déjà en avant quelques suppositions.<br>
+          En premier lieu,<br>
+          il n’a jamais été déterminé s’il s’agissait effectivement d’une tombe.<br>
+          Aucune fouille n’ayant été entreprise,<br>
+          il est malheureusement impossible de savoir si un corps repose à cet endroit</p>
+
+        <p>Deuxièmement, la nationalité du défunt n’a jamais pu être vérifiée.<br>
+          Il pourrait toutefois s’agir d’un soldat de nationalité étrangère,<br>
+          et qui serait décédé sur les lieux durant les guerres des siècles passés.<br>
+          La tradition orale aurait alors transporté jusqu’à nous ce fait historique, ou cette légende…</p>
+
+        <p>Seules les cartes récentes font mention d’une tombe à cet endroit.<br>
+          La tombe est entretenu régulièrement par le Club Vosgien de Lemberg. </p>
+
+        <div class="img-tombe-russe">
+          <img src="img/tombe-russe.jpg" alt="Lavoir du Helloch">
+        </div>
+      </div>
+
+      <!-- 09 | Le lavoir Grébil -->
+
+      <div class="lavoir-G">
+        <div class="titre-LG">
+          <p id="lavoirG-lien">09
+            <svg xmlns="http://www.w3.org/2000/svg" width="5.52" height="47.82" viewBox="0 0 5.52 47.82">
+              <rect id="Rectangle_23" data-name="Rectangle 23" width="47.82" height="5.52" transform="translate(5.52) rotate(90)" />
+            </svg>
+            Le lavoir Grébil
+          </p>
+        </div>
+        <p>Accès : On accède à ce lavoir à partir du chalet en suivant <br>
+          le circuit « anneau jaune » en 45 minutes.</p>
+
+        <p>La Bildmuhl était une ancienne annexe du village de Lemberg.<br>
+          Elle était habitée par plusieurs familles jusqu’à la Deuxième Guerre Mondiale.<br>
+          Cette belle vallée abrita pendant quelques années deux moulin : la « Alt Muhle »<br>
+          à la Bildmuhl supérieure et la « Neu Müle » à la Bildmuhl inférieure.</p>
+
+        <p>La « Neu Muhle » fut construite vers les années 1750 par Bernard Neufink.<br>
+          Malheureusement il est aujourd’hui difficile d’identifier où se trouvait ce bâtiment.<br>
+          Seuls quelques moellons des fondations subsistent.<br>
+          Pourtant, à quelques mètres du moulin, un formidable témoignage est parvenu<br>
+          jusqu’à nous : « le lavoir Grebil».</p>
+
+        <p>Taillé dans le rocher en une seule pièce ce lavoir privé a appartenu<br>
+          à la famille Grébil dans les années 1860.<br>
+          L’édifice a été rénové par le Club Vosgien cette année.</p>
+
+        <div class="img-lavoir-G">
+          <img src="img/ob_e071be_dsc-1004-fileminimizer.jpg" alt="Le lavoir Grébil">
+        </div>
+
+      </div>
+
+      <!-- 10 | la Matrone de la Bildmuhl -->
+
+      <div class="matrone-B">
+        <div class="titre-MB">
+          <p id="matroneB-lien">10
+            <svg xmlns="http://www.w3.org/2000/svg" width="5.52" height="47.82" viewBox="0 0 5.52 47.82">
+              <rect id="Rectangle_23" data-name="Rectangle 23" width="47.82" height="5.52" transform="translate(5.52) rotate(90)" />
+            </svg>
+            La Matrone de la Bildmuhl
+          </p>
+        </div>
+        <div class="img-matrone-B">
+          <img src="img/matronne.jpg" alt="Matrone">
+        </div>
+        <p>Accès : L’accès à la sculpture se fait en suivant l’anneau jaune, tout comme pour le « lavoir Grebil » <br>
+          en 40 minutes. Elle reste difficile à trouver et se situe à quelques<br>
+          mètres à gauche d’un bâtiment de briques rouges.</p>
+
+        <p>Il existe près de notre village trois gravures gallo-romaines :<br>
+          la source Saint Hubert, le rocher des Trois Figures et la matrone de la Bildmuhl.<br>
+          Cette sculpture a toutefois une histoire bien particulière.<br>
+          Comme nous l’avons relaté plus haut, la vallée comportait deux moulins.<br>
+          La matrone se trouvait tout simplement dans la cave du moulin de la Bildmuhl supérieure !<br>
+          Il est d’ailleurs fort probable que le nom de la vallée « Bild Muhle »,<br>
+          à traduire par « moulin à l’image » vienne de cette sculpture.</p>
+
+        <p>Mesurant 70cm sur 30cm, la sculpture daterai de la période gallo-romaine et est très usée par le temps.<br>
+          L’Inventaire Générale du Patrimoine Culturel décrit la sculpture :<br>
+          « Une matrone, femme assise portant une tunique tombant jusqu’aux pieds<br>
+          et un pallium maintenu par un diadème.<br>
+          Dans son bras gauche une corne d’abondance et dans son bras droit une patène.<br>
+          Relief dédié à une matrone, protectrice des sources, pour obtenir la fécondité des sols et des femmes ».</p>
+
+
+      </div>
+
+      <!-- 11 | la stèle WURTZ -->
+
+      <div class="stele-W">
+        <div class="titre-W">
+          <p id="steleW-lien">11
+            <svg xmlns="http://www.w3.org/2000/svg" width="5.52" height="47.82" viewBox="0 0 5.52 47.82">
+              <rect id="Rectangle_23" data-name="Rectangle 23" width="47.82" height="5.52" transform="translate(5.52) rotate(90)" />
+            </svg>
+            La stèle "WURTZ"
+          </p>
+        </div>
+
+        <p>Accès : depuis le stade, descendre vers la D37 qui mène de Lemberg à Bitche<br>
+          puis suivre le balisage « anneau bleu ». <br>
+          Compter 1h30 pour l’ensemble du circuit. Plus rapidement, se garer dans la vallée à droite,<br>
+          juste avant d’arriver à Reyersviller. Suivre alors le même balisage. <br>
+          Compter 25 minutes pour arriver sur le site.</p>
+
+        <p>Au début du XXème siècle, les travaux forestiers <br>
+          restaient une activité particulièrement dangereuse. <br>
+          Le 20 janvier 1903, Joseph Wurtz de Schorbach<br>
+          décéda malheureusement en forêt, dans la vallée du Schoenthal. <br>
+          Sa famille érigea alors en sa mémoire une stèle, aujourd’hui dénommée « Stèle Wurtz ».</p>
+
+        <p>Le site est entretenu par le Club Vosgien</p>
+
+        <div class="img-stele-W">
+          <img src="img/b0e1c97f2a5bceff8546d9ef9ef8ef5142611808.jpg" alt="La stèle 'WURTZ'">
+        </div>
+
+      </div>
+
+      <!-- Div text -->
+    </div>
+
+    <!-- Le footer, comme son nom l'indique, est en bas de page et avertit de la fin de la page / il donne aussi des informations
+    sur les réseaux sociaux ainsi que de l'auteur du site  -->
+    <div class="footer">
+      <div class="text-gauche">
+        <span>Chalet du Club <br> Vosgien </span> <span> Lemberg.</span>
+        <span>Tous droits réservés</span>
+      </div>
+      <div class="reseau-sociaux">
+        <p>Réseaux Sociaux</p>
+
+        <div class="logo-reseaux">
+          <svg id="Capa_1" enable-background="new 0 0 512 512" height="50" viewBox="0 0 512 512" width="50" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="m512 256c0-141.4-114.6-256-256-256s-256 114.6-256 256 114.6 256 256 256c1.5 0 3 0 4.5-.1v-199.2h-55v-64.1h55v-47.2c0-54.7 33.4-84.5 82.2-84.5 23.4 0 43.5 1.7 49.3 2.5v57.2h-33.6c-26.5 0-31.7 12.6-31.7 31.1v40.8h63.5l-8.3 64.1h-55.2v189.5c107-30.7 185.3-129.2 185.3-246.1z" />
+          </svg>
+
+
+          <svg height="50" viewBox="-21 -81 681.33464 681" width="50" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="m200.964844 515.292969c241.050781 0 372.871094-199.703125 372.871094-372.871094 0-5.671875-.117188-11.320313-.371094-16.9375 25.585937-18.5 47.824218-41.585937 65.371094-67.863281-23.480469 10.441406-48.753907 17.460937-75.257813 20.636718 27.054687-16.230468 47.828125-41.894531 57.625-72.488281-25.320313 15.011719-53.363281 25.917969-83.214844 31.808594-23.914062-25.472656-57.964843-41.402344-95.664062-41.402344-72.367188 0-131.058594 58.6875-131.058594 131.03125 0 10.289063 1.152344 20.289063 3.398437 29.882813-108.917968-5.480469-205.503906-57.625-270.132812-136.921875-11.25 19.363281-17.742188 41.863281-17.742188 65.871093 0 45.460938 23.136719 85.605469 58.316407 109.082032-21.5-.660156-41.695313-6.5625-59.351563-16.386719-.019531.550781-.019531 1.085937-.019531 1.671875 0 63.46875 45.171875 116.460938 105.144531 128.46875-11.015625 2.996094-22.605468 4.609375-34.558594 4.609375-8.429687 0-16.648437-.828125-24.632812-2.363281 16.683594 52.070312 65.066406 89.960937 122.425781 91.023437-44.855469 35.15625-101.359375 56.097657-162.769531 56.097657-10.5625 0-21.003906-.605469-31.2617188-1.816407 57.9999998 37.175781 126.8710938 58.871094 200.8867188 58.871094" />
+          </svg>
+
+
+          <svg height="50" viewBox="0 0 511 511.9" width="50" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="m510.949219 150.5c-1.199219-27.199219-5.597657-45.898438-11.898438-62.101562-6.5-17.199219-16.5-32.597657-29.601562-45.398438-12.800781-13-28.300781-23.101562-45.300781-29.5-16.296876-6.300781-34.898438-10.699219-62.097657-11.898438-27.402343-1.300781-36.101562-1.601562-105.601562-1.601562s-78.199219.300781-105.5 1.5c-27.199219 1.199219-45.898438 5.601562-62.097657 11.898438-17.203124 6.5-32.601562 16.5-45.402343 29.601562-13 12.800781-23.097657 28.300781-29.5 45.300781-6.300781 16.300781-10.699219 34.898438-11.898438 62.097657-1.300781 27.402343-1.601562 36.101562-1.601562 105.601562s.300781 78.199219 1.5 105.5c1.199219 27.199219 5.601562 45.898438 11.902343 62.101562 6.5 17.199219 16.597657 32.597657 29.597657 45.398438 12.800781 13 28.300781 23.101562 45.300781 29.5 16.300781 6.300781 34.898438 10.699219 62.101562 11.898438 27.296876 1.203124 36 1.5 105.5 1.5s78.199219-.296876 105.5-1.5c27.199219-1.199219 45.898438-5.597657 62.097657-11.898438 34.402343-13.300781 61.601562-40.5 74.902343-74.898438 6.296876-16.300781 10.699219-34.902343 11.898438-62.101562 1.199219-27.300781 1.5-36 1.5-105.5s-.101562-78.199219-1.300781-105.5zm-46.097657 209c-1.101562 25-5.300781 38.5-8.800781 47.5-8.601562 22.300781-26.300781 40-48.601562 48.601562-9 3.5-22.597657 7.699219-47.5 8.796876-27 1.203124-35.097657 1.5-103.398438 1.5s-76.5-.296876-103.402343-1.5c-25-1.097657-38.5-5.296876-47.5-8.796876-11.097657-4.101562-21.199219-10.601562-29.398438-19.101562-8.5-8.300781-15-18.300781-19.101562-29.398438-3.5-9-7.699219-22.601562-8.796876-47.5-1.203124-27-1.5-35.101562-1.5-103.402343s.296876-76.5 1.5-103.398438c1.097657-25 5.296876-38.5 8.796876-47.5 4.101562-11.101562 10.601562-21.199219 19.203124-29.402343 8.296876-8.5 18.296876-15 29.398438-19.097657 9-3.5 22.601562-7.699219 47.5-8.800781 27-1.199219 35.101562-1.5 103.398438-1.5 68.402343 0 76.5.300781 103.402343 1.5 25 1.101562 38.5 5.300781 47.5 8.800781 11.097657 4.097657 21.199219 10.597657 29.398438 19.097657 8.5 8.300781 15 18.300781 19.101562 29.402343 3.5 9 7.699219 22.597657 8.800781 47.5 1.199219 27 1.5 35.097657 1.5 103.398438s-.300781 76.300781-1.5 103.300781zm0 0" />
+            <path
+              d="m256.449219 124.5c-72.597657 0-131.5 58.898438-131.5 131.5s58.902343 131.5 131.5 131.5c72.601562 0 131.5-58.898438 131.5-131.5s-58.898438-131.5-131.5-131.5zm0 216.800781c-47.097657 0-85.300781-38.199219-85.300781-85.300781s38.203124-85.300781 85.300781-85.300781c47.101562 0 85.300781 38.199219 85.300781 85.300781s-38.199219 85.300781-85.300781 85.300781zm0 0" />
+            <path
+              d="m423.851562 119.300781c0 16.953125-13.746093 30.699219-30.703124 30.699219-16.953126 0-30.699219-13.746094-30.699219-30.699219 0-16.957031 13.746093-30.699219 30.699219-30.699219 16.957031 0 30.703124 13.742188 30.703124 30.699219zm0 0" />
+          </svg>
+        </div>
+      </div>
+      <div class="text-droit">
+        <p>Ecrit par Philippe</p>
+        <p>Réalisé par son fils, Clément</p>
+      </div>
+    </div>
+
+    <!-- Div page -->
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==" crossorigin=""></script>
+  <script src="javascript/decouvrir-lemberg.js" charset="utf-8"></script>
+</body>
+
+</html>
